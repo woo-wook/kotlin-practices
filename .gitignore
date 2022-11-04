@@ -1,0 +1,6 @@
+# folder
+out/
+.idea/
+
+# file
+kotlin-practices.iml
