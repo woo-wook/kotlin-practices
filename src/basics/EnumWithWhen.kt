@@ -37,8 +37,18 @@ fun mix(c1: Color, c2: Color) =
         else -> throw Exception("Dirty color")
     }
 
+fun mixOptimized(c1: Color, c2: Color) =
+    when {
+        (c1 == Color.RED && c2 == Color.YELLOW) || (c1 == Color.YELLOW && c2 == Color.RED) -> Color.ORANGE
+        (c1 == Color.BLUE && c2 == Color.YELLOW) || (c1 == Color.YELLOW && c2 == Color.BLUE) -> Color.GREEN
+        (c1 == Color.BLUE && c2 == Color.VIOLET) || (c1 == Color.VIOLET && c2 == Color.BLUE) -> Color.INDIGO
+        else -> throw Exception("Dirty Color")
+    }
+
 fun main() {
     println(getMnemonic(Color.RED))
     println(getWarmth(Color.ORANGE))
     println(mix(Color.RED, Color.YELLOW))
+    println(mixOptimized(Color.RED, Color.YELLOW))
+    println(mixOptimized(Color.RED, Color.INDIGO))
 }
