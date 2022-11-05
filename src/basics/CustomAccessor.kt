@@ -1,5 +1,7 @@
 package elements
 
+import java.util.Random
+
 class CustomAccessor { }
 
 class Rectangle(
@@ -8,6 +10,11 @@ class Rectangle(
 ) {
     val isSquare: Boolean
         get() = height == width
+}
+
+fun createRandomRectangle(): Rectangle {
+    val random = Random()
+    return Rectangle(random.nextInt(), random.nextInt())
 }
 
 fun main() {
