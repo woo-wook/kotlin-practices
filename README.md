@@ -223,3 +223,8 @@
 ### [접근자의 가시성 변경](src/objects/ChangeAccessorVisibility.kt)
 
 > 접근자의 가시성은 기본적으로 프로퍼티의 가시성과 같다. 하지만 원한다면 가시성 변경자를 추가해 접근자의 가시성을 변경할 수 있다.
+
+### [모든 클래스가 정의해야 하는 메서드](src/objects/UniversalObjectMethods.kt)
+
+> 모든 클래스는 **toString()**, **equals()**, **hashCode()** 를 구현해야 한다. 기본적으로 구현은 되어 있지만, 요구사항을 만족하기 위해 추가로 오버라이드하는 경우가 종종 있다.
+>  **equals()**, **hashCode()** 는 항상 같이 구현해야 한다. (example set)
