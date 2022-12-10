@@ -509,3 +509,7 @@
 ### [in 관례](src/conventions/InConvention.kt)
 
 > in은 객체가 컬렉션에 들어있는지 검사한다. 그런 경우 대응하는 함수는 contains 이다. in의 우항에 있는 객체는 contains 메서드의 수신 객체가 되고, 좌항이 있는 객체는 contains 메서드의 인자로 전달된다.
+
+### [rangeTo 관례](src/conventions/RangeToConvention.kt)
+
+> 범위를 만들려면 .. 구문을 사용해야 한다. 예를 들어 1..10은 1부터 10까지 모든 수가 들어있는 범위를 가리킨다. .. 연산자는 rangeTo 함수를 간략하게 표현하는 방법이다. 
