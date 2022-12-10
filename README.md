@@ -512,4 +512,9 @@
 
 ### [rangeTo 관례](src/conventions/RangeToConvention.kt)
 
-> 범위를 만들려면 .. 구문을 사용해야 한다. 예를 들어 1..10은 1부터 10까지 모든 수가 들어있는 범위를 가리킨다. .. 연산자는 rangeTo 함수를 간략하게 표현하는 방법이다. 
+> 범위를 만들려면 .. 구문을 사용해야 한다. 예를 들어 1..10은 1부터 10까지 모든 수가 들어있는 범위를 가리킨다. .. 연산자는 rangeTo 함수를 간략하게 표현하는 방법이다.
+
+### [for 루프를 위한 iterator 관례](src/conventions/IteratorConventionForTheForLoop.kt)
+
+> 코틀린의 for 루프는 범위 검사와 똑같이 in 연산자를 사용한다. 하지만 이 경우 in 의미가 다르다. list.iterator()를 호출해서 이터레이터를 얻은 다음, 그 이터레이터에 대해 hasNext, next 호출을 반복하는 식으로 변환된다.
+> 하지만 코틀린은 이 또한 관례이므로 확장 함수로 정의할 수 있다. 이런 성질로 인해 일반 자바 문자열에 대한 for 루프가 가능하다.
