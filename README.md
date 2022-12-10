@@ -488,3 +488,8 @@
 ### [단항 연산자 오버로딩](src/conventions/OverloadingUnaryOperators.kt)
 
 > 단항 연산자를 오버로딩 하는 절차도 이항 연산자와 마찬가지다. 미리 정해진 이름의 함수를 선언하면서 operator로 표시하면 된다.
+
+### [동등성 연산자 오버로딩(equals)](src/conventions/EqualityOperators.kt)
+
+> 코틀린에서는 산술연산자와 마찬가지로 원시 타입 뿐 아니라 모든 객체에 대해 비교 연산을 수행할 수 있다. 코틀린은 동등성을 == 연산자 호출을 equals 메서드 호출로 컴파일한다. != 연산자를 호출하는 식 또한 equals 호출로 컴파일된다. 
+> 코틀린은 널이 아닌 경우에만 호출하기에 NPE를 방지한다. data class는 이를 대신 생성해주는 역할을 수행한다. equals는 Any의 메서드이므로 override가 필요하다. 따라서 operator를 붙이지 않는다.
