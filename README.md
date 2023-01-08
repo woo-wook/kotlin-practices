@@ -567,3 +567,8 @@
 ### [인자로 받은 함수 호출](src/higherfunction/CallingFunctionsPassedAsArguments.kt)
 
 > 인자로 받은 함수를 호출하는 구문은 일반 함수를 호출하는 구문과 같다.  
+
+### [자바에서 코틀린 함수 사용](src/javatype/CallingProcessTheAnswer.java)
+
+> 함수 타입은 일반 인터페이스로 바뀐다. 즉 함수 타입의 변수는 FunctionN 인터페이스를 구현하는 객체를 저장한다. 각 인터페이스에는 invoke 메서드 정의가 하나 들어있다.
+> 이 메서드를 실행하면 함수를 실행할 수 있다. 이렇게 되어 함수 타입을 사용하는 코틀린 함수를 자바에서도 쉽게 호출할 수 있다.
