@@ -765,3 +765,7 @@
 ### [애노테이션 파라미터로 클래스 사용](src/annotations/ClassesAsAnnotationParameters.kt)
 
 > 어떤 클래스를 선언 메타데이터로 참조할 수 있는 기능이 필요할 때가 종종 있다. 클래스 참조를 파라미터로 하는 애노테이션 클래스를 선언하면 그런 기능을 사용할 수 있다.
+
+### [애노테이션 파라미터로 제네릭 클래스 받기](src/annotations/GenericClassesAsAnnotationParameters.kt)
+
+> 클래스를 사용하는것과 같이 제네릭 클래스도 사용이 가능하다. 스타 프로젝션을 통해 어떤 타입의 값이든 허용이 가능하게 유도할 수 있다.
