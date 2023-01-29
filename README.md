@@ -792,3 +792,8 @@
 ### [애노테이션을 활용하기](src/reflections/ReflectionWithAnnotations.kt)
 
 > **KProperty**에서는 **annotations** 프로퍼티가 있다. 소스 코드 상에서 해당 요소에 적용 된 모든 애노테이션 인스턴스의 컬렉션이다. 어떤 한 애노테이션을 찾기 위해서는 findAnnotation 함수를 사용하면 된다.
+
+### [callBy(리플렉션을 사용해 객체 만들기)](src/reflections/callBy.kt)
+
+> 객체 인스턴스를 생성하고 파라미터 정보를 캐시하는 ClassInfo 클래스가 있다. 이를 이해하고 KCallable의 callBy()를 사용하면 객체를 생성할 수 있다. (default 값을 사용하기 위해서는 KCallable.callBy 를 사용해야 한다.)
+> 해당 메서드는 파라미터와 값을 연결해주는 맵을 인자로 받는다. 파라미터 값이 없는데, 디폴트 값이 있다면 그 값을 사용한다. 파라미터의 순서를 지킬 필요가 없다.
