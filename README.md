@@ -788,3 +788,7 @@
 ### [리플렉션을 활용한 객체 직렬화 구현](src/reflections/ImplementingObjectSerializationUsingReflection.kt)
 
 > 함수 파라미터를 확장 함수의 수신 객체로 바꾸는 방식은 코틀린에서 흔히 사용하는 방식이다.
+
+### [애노테이션을 활용하기](src/reflections/ReflectionWithAnnotations.kt)
+
+> **KProperty**에서는 **annotations** 프로퍼티가 있다. 소스 코드 상에서 해당 요소에 적용 된 모든 애노테이션 인스턴스의 컬렉션이다. 어떤 한 애노테이션을 찾기 위해서는 findAnnotation 함수를 사용하면 된다.
