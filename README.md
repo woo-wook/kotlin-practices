@@ -822,3 +822,9 @@
 > async는 사실상 launch와 같은 일을 한다. 유일한 차이는 launch가 Job을 반환하는 반면, async는 Deffered를 반환한다. Deffered는 Job을 상속받은 클래스기 때문에, 아무런 문제가 없다.
 > Deffered는 타입 파라미터가 있는 제네릭 타입이다. 이 타입 파라미터는 코루틴이 계산을 하고 돌려주는 값의 타입이다. 따라서 async는 코드 블록을 비동기로 실행할 수 있고, async가 반환하는 deffered의 await을 사용해서 코루틴이 결과 값을 내놓을 때까지 
 > 기다렸다가 결과값을 얻어낼 수 있다. async/await을 사용하면, 모두가 메인 스레드에서 실행된다.
+
+### [코루틴 컨텍스트와 디스패처](src/main/kotlin/coroutines/CoroutineContext.kt)
+
+> launch, async 등은 모두 CoroutineScope의 확장 함수다. 그런데 CoroutineScope에는 CoroutineContext 하나만 들어있다. 사실 CoroutineScope는 필드를 launch 등의 확장 함수 내부에서 사용하기 위한 매개체다.
+> 원한다면 launch 등에 CoroutineContext를 넘길 수 있다. CoroutineContext는 실제로 코루틴이 실행중인 여러 작업과 디스패처를 저장하는 일종의 맵이다. 코틀린 럼타임은 CoroutineContext를 사용해 다음 실행 작업을 선정하고 어떻게 
+> 스레드에 배정할 지 방법을 결정한다. 
