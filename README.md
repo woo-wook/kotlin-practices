@@ -828,3 +828,9 @@
 > launch, async 등은 모두 CoroutineScope의 확장 함수다. 그런데 CoroutineScope에는 CoroutineContext 하나만 들어있다. 사실 CoroutineScope는 필드를 launch 등의 확장 함수 내부에서 사용하기 위한 매개체다.
 > 원한다면 launch 등에 CoroutineContext를 넘길 수 있다. CoroutineContext는 실제로 코루틴이 실행중인 여러 작업과 디스패처를 저장하는 일종의 맵이다. 코틀린 럼타임은 CoroutineContext를 사용해 다음 실행 작업을 선정하고 어떻게 
 > 스레드에 배정할 지 방법을 결정한다. 
+
+### 코루틴 빌더와 일시 중단 함수
+
+> 지금까지 살펴본 launch, async 등은 모두 코루틴 빌더라고 불린다. 이들은 코루틴을 만들어주는 함수다. 코루틴 빌더는 이것 외에도 produce(정해진 채널로 데이터를 스트림으로 보내는 코루틴), actor(정해진 채널로 메시지를 받아 처리하는 액터 코루틴)가 있다.
+> 한편 delay()와 yield()는 코루틴 안에서 특별한 의미를 지니는 함수들이다. 이런 함수를 일시중단 함수라고 부른다. delay()와 yield() 외에 withContext, withTimeout, withTimeoutOrNull, awaitAll, joinAll 
+> 등이 일시 중단 함수이다.
